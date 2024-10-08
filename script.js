@@ -1,42 +1,64 @@
-// Слайдер
-let slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
-
-document.querySelector('.next').addEventListener('click', () => {
-    changeSlide(1);
-});
-
-document.querySelector('.prev').addEventListener('click', () => {
-    changeSlide(-1);
-});
-
-function changeSlide(direction) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
+body {
+    margin: 0;
+    font-family: 'LeoHand', sans-serif; /* Используем шрифт, если он доступен */
 }
 
-// Обновление цены фильтра
-let priceRange = document.getElementById('price');
-let priceOutput = document.getElementById('price-output');
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
 
-priceRange.addEventListener('input', () => {
-    priceOutput.textContent = ${priceRange.value} руб.;
-});
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #444;
+    margin: 0;
+    padding: 0;
+}
 
-// Кнопка наверх
-window.addEventListener('scroll', () => {
-    const scrollBtn = document.querySelector('.scroll-to-top');
-    if (window.scrollY > 300) {
-        scrollBtn.style.display = 'block';
-    } else {
-        scrollBtn.style.display = 'none';
-    }
-});
+nav ul li {
+    margin: 0 15px;
+}
 
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.catalog {
+    text-align: center;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
