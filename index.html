@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин Одежды - Стиль и Качество</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">Магазин Одежды</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Мужская Одежда</a>
+                        <div class="mega-menu">
+                    <li><a href="#">Обувь</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+<!-- Слайдер -->
+    <section class="slider">
+        <div class="slide active">
+            <img src="https://via.placeholder.com/1200x500" alt="Новая Коллекция">
+            <div class="banner-content">
+                <h1>Осенне-Зимняя Коллекция</h1>
+                <p>Будьте готовы к холоду с нашими новыми куртками</p>
+                <a href="#" class="btn">Посмотреть</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/1200x500" alt="Скидки">
+            <div class="banner-content">
+                <h1>Скидки до 50%</h1>
+                <p>Сезонные распродажи на избранные товары</p>
+                <a href="#" class="btn">Узнать больше</a>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Фильтры и сортировка -->
+    <section class="filters">
+        <div class="filter-bar">
+            <div class="filter">
+                <label for="category">Категория:</label>
+                <select id="category">
+                    <option value="all">Все</option>
+                    <option value="mens">Мужская Одежда</option>
+                    <option value="womens">Женская Одежда</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="sort">Сортировать по:</label>
+                <select id="sort">
+                    <option value="popular">Популярности</option>
+                    <option value="price-asc">Цене (по возрастанию)</option>
+                    <option value="price-desc">Цене (по убыванию)</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="price">Цена:</label>
+                <input type="range" id="price" min="0" max="50000" value="25000">
+                <span id="price-output">25 000 руб.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Товары -->
+    <section class="featured-products">
+        <h2>Товары со скидками</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Куртка">
+                <h3>Куртка</h3>
+                <p>12 000 руб. <span class="old-price">15 000 руб.</span></p>
+                <div class="rating">★★★★★</div>
+                <button class="btn add-to-cart">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Сумка">
+                <h3>Сумка</h3>
+                <p>25 000 руб. <span class="old-price">30 000 руб.</span></p>
+                <div class="rating">★★★★☆</div>
+                <button class="btn add-to-cart">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Пальто">
+                <h3>Пальто</h3>
+                <p>35 000 руб. <span class="old-price">45 000 руб.</span></p>
+                <div class="rating">★★★★★</div>
+                <button class="btn add-to-cart">Добавить в корзину</button>
+            </div>
+        </div>
+    </section>
+
+толстый, [08.10.2024 16:38]
+<!-- Новинки -->
+    <section class="new-products">
+        <h2>Новинки</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Новая Футболка">
+                <h3>Новая Футболка</h3>
+                <p>2 000 руб.</p>
+                <button class="btn add-to-cart">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Новая Сумка">
+                <h3>Новая Сумка</h3>
+                <p>15 000 руб.</p>
+                <button class="btn add-to-cart">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Новые Джинсы">
+                <h3>Новые Джинсы</h3>
+                <p>5 000 руб.</p>
+                <button class="btn add-to-cart">Добавить в корзину</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подписка -->
+    <section class="newsletter">
+        <h2>Подпишитесь на наши обновления</h2>
+        <p>Получайте новости о скидках и новинках прямо на ваш e-mail</p>
+        <form>
+            <input type="email" placeholder="Ваш Email">
+            <button type="submit">Подписаться</button>
+        </form>
+    </section>
+
+    <!-- Кнопка наверх -->
+    <button class="scroll-to-top" onclick="scrollToTop()">⬆️</button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <p>© 2024 Магазин Одежды. Все права защищены.</p>
+            <p>Контакты: <a href="mailto:info@magazin.com">info@magazin.com</a></p>
+        </div>
+        <div class="footer-bottom">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Условия использования</a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
